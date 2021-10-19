@@ -79,7 +79,7 @@ export function checkUsernameAvailability(username) {
 }
 
 export function checkEmailAvailability(email) {
-    return new Promise(((resolve, reject) => resolve('test@gmail.com')));
+    return new Promise(((resolve, reject) => resolve({available: true})));
 
     return request({
         url: API_BASE_URL + "/user/checkEmailAvailability?email=" + email,
