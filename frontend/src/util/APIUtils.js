@@ -2,7 +2,7 @@ import { API_BASE_URL, POLL_LIST_SIZE, ACCESS_TOKEN } from '../constants';
 
 const request = (options) => {
     const headers = new Headers({
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
     })
     
     if(localStorage.getItem(ACCESS_TOKEN)) {
@@ -52,7 +52,6 @@ export function castVote(voteData) {
 }
 
 export function login(loginRequest) {
-    return new Promise(((resolve, reject) => resolve('test@gmail.com')));
 
     return request({
         url: API_BASE_URL + "/auth/signin",
@@ -62,8 +61,6 @@ export function login(loginRequest) {
 }
 
 export function signup(signupRequest) {
-    return new Promise(((resolve, reject) => resolve('test@gmail.com')));
-
     return request({
         url: API_BASE_URL + "/auth/signup",
         method: 'POST',
@@ -79,8 +76,6 @@ export function checkUsernameAvailability(username) {
 }
 
 export function checkEmailAvailability(email) {
-    return new Promise(((resolve, reject) => resolve({available: true})));
-
     return request({
         url: API_BASE_URL + "/user/checkEmailAvailability?email=" + email,
         method: 'GET'
@@ -89,8 +84,6 @@ export function checkEmailAvailability(email) {
 
 
 export function getCurrentUser() {
-    return new Promise(((resolve, reject) => resolve('test@gmail.com')));
-
     if(!localStorage.getItem(ACCESS_TOKEN)) {
         return Promise.reject("No access token set.");
     }
