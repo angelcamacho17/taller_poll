@@ -61,6 +61,7 @@ class App extends Component {
 
   componentDidMount() {
     this.loadCurrentUser();
+    this.unmounted = false;
   }
 
   handleLogout(redirectTo="/", notificationType="success", description="You're successfully logged out.") {

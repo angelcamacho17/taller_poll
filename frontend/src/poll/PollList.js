@@ -36,6 +36,7 @@ class PollList extends Component {
                 promise = getUserVotedPolls(this.props.username, page, size);
             }
         } else {
+            console.log('HERE')
             promise = getAllPolls(page, size);
         }
 
@@ -49,6 +50,7 @@ class PollList extends Component {
 
         promise
         .then(response => {
+            console.log(response)
             const polls = this.state.polls.slice();
             const currentVotes = this.state.currentVotes.slice();
 
@@ -67,7 +69,6 @@ class PollList extends Component {
                 isLoading: false
             })
         });
-
     }
 
     componentDidMount() {
@@ -157,6 +158,8 @@ class PollList extends Component {
                 handleVoteChange={(event) => this.handleVoteChange(event, pollIndex)}
                 handleVoteSubmit={(event) => this.handleVoteSubmit(event, pollIndex)} />)
         });
+
+        console.log(this.state.polls)
 
         return (
             <div className="polls-container">

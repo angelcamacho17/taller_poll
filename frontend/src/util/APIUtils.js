@@ -27,8 +27,6 @@ export function getAllPolls(page, size) {
     page = page || 0;
     size = size || POLL_LIST_SIZE;
 
-    return new Promise(((resolve, reject) => resolve('test@gmail.com')));
-
     return request({
         url: API_BASE_URL + "/polls?page=" + page + "&size=" + size,
         method: 'GET'
