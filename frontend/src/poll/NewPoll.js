@@ -21,7 +21,8 @@ class NewPoll extends Component {
             }],
             pollLength: {
                 days: 1,
-                hours: 0
+                hours: 0,
+                minutes: 0
             }
         };
         this.addChoice = this.addChoice.bind(this);
@@ -31,6 +32,7 @@ class NewPoll extends Component {
         this.handleChoiceChange = this.handleChoiceChange.bind(this);
         this.handlePollDaysChange = this.handlePollDaysChange.bind(this);
         this.handlePollHoursChange = this.handlePollHoursChange.bind(this);
+        this.handlePollMinutesChange = this.handlePollMinutesChange.bind(this);
         this.isFormInvalid = this.isFormInvalid.bind(this);
     }
 
@@ -152,6 +154,13 @@ class NewPoll extends Component {
         });
     }
 
+    handlePollMinutesChange(value) {
+        const pollLength = Object.assign(this.state.pollLength, {minutes: value});
+        this.setState({
+            pollLength: pollLength
+        });
+    }
+
     isFormInvalid() {
         if(this.state.question.validateStatus !== 'success') {
             return true;
@@ -224,6 +233,20 @@ class NewPoll extends Component {
                                             )
                                         }
                                     </Select> &nbsp;Hours
+                                </span>
+                                <span>
+                                    <Select
+                                        name="minutes"
+                                        defaultValue="0"
+                                        onChange={this.handlePollMinutesChange}
+                                        value={this.state.pollLength.minutes}
+                                        style={{ width: 60 }} >
+                                        {
+                                            Array.from(Array(60).keys()).map(i =>
+                                                <Option key={i}>{i}</Option>
+                                            )
+                                        }
+                                    </Select> &nbsp;Minutes
                                 </span>
                             </Col>
                         </FormItem>

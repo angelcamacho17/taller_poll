@@ -12,6 +12,10 @@ public class PollLength {
     @Max(23)
     private Integer hours;
 
+    @NotNull
+    @Max(59)
+    private Integer minutes;
+
     public int getDays() {
         return days;
     }
@@ -26,5 +30,13 @@ public class PollLength {
 
     public void setHours(int hours) {
         this.hours = hours;
+    }
+
+    public int getMinutes() {
+        return minutes;
+    }
+
+    public void setMinutes(int minutes) {
+        this.minutes = minutes;
     }
 }

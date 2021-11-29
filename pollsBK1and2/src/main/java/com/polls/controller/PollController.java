@@ -72,7 +72,6 @@ public class PollController {
     }
 
     @PostMapping("/{pollId}/votes")
-    @PreAuthorize("hasRole('ADMIN')")
     @CrossOrigin(origins = "http://localhost:3000")
     public PollResponse castVote(@CurrentUser UserPrincipal currentUser,
                          @PathVariable Long pollId,
