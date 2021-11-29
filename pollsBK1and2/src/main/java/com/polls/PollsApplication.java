@@ -9,9 +9,9 @@ import javax.annotation.PostConstruct;
 import java.util.TimeZone;
 
 @SpringBootApplication
-@EntityScan(basePackageClasses = { 
+@EntityScan(basePackageClasses = {
 		PollsApplication.class,
-		Jsr310JpaConverters.class 
+		Jsr310JpaConverters.class
 })
 public class PollsApplication {
 

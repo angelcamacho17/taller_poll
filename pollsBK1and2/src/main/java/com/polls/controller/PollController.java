@@ -25,6 +25,7 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/api/polls")
+@CrossOrigin(origins = "http://localhost:3000")
 public class PollController {
 
     @Autowired
@@ -50,8 +51,9 @@ public class PollController {
 
     @PostMapping
     @PreAuthorize("hasRole('USER')")
-    public ResponseEntity<?> createPoll(@Valid @RequestBody PollRequest pollRequest) {
-        Poll poll = pollService.createPoll(pollRequest);
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<?> createPoll(@CurrentUser UserPrincipal currentUser, @Valid @RequestBody PollRequest pollRequest) {
+        Poll poll = pollService.createPoll(currentUser, pollRequest);
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest().path("/{pollId}")
@@ -63,6 +65,7 @@ public class PollController {
 
 
     @GetMapping("/{pollId}")
+    @CrossOrigin(origins = "http://localhost:3000")
     public PollResponse getPollById(@CurrentUser UserPrincipal currentUser,
                                     @PathVariable Long pollId) {
         return pollService.getPollById(pollId, currentUser);
@@ -70,6 +73,7 @@ public class PollController {
 
     @PostMapping("/{pollId}/votes")
     @PreAuthorize("hasRole('USER')")
+    @CrossOrigin(origins = "http://localhost:3000")
     public PollResponse castVote(@CurrentUser UserPrincipal currentUser,
                          @PathVariable Long pollId,
                          @Valid @RequestBody VoteRequest voteRequest) {

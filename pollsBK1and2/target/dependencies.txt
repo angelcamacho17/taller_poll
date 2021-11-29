@@ -1,16 +1,16 @@
-digraph "com.example:polls:jar:0.0.1-SNAPSHOT" { 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-data-jpa:jar:2.5.6:compile" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-security:jar:2.5.6:compile" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-validation:jar:2.5.6:compile" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-web:jar:2.5.6:compile" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "mysql:mysql-connector-java:jar:8.0.27:runtime" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.6:test" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.security:spring-security-test:jar:5.5.3:test" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-devtools:jar:2.5.6:compile" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.12.5:compile" ; 
+digraph "com:polls:jar:0.0.1-SNAPSHOT" { 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-data-jpa:jar:2.5.6:compile" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-security:jar:2.5.6:compile" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-validation:jar:2.5.6:compile" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-web:jar:2.5.6:compile" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "mysql:mysql-connector-java:jar:8.0.27:runtime" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.6:test" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.security:spring-security-test:jar:5.5.3:test" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-devtools:jar:2.5.6:compile" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.12.5:compile" ; 
 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.5.6:compile" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.5.6:compile" ; 
 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.5.6:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:2.5.6:compile" ; 
 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.5.6:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile" ; 
@@ -98,19 +98,19 @@ digraph "com.example:polls:jar:0.0.1-SNAPSHOT" {
 	"io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.12.5:compile" ; 
 	"com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.12.5:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.12.5:compile" ; 
 	"com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.12.5:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.12.5:compile" ; 
- } digraph "com.example:polls:jar:0.0.1-SNAPSHOT" { 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-data-jpa:jar:2.5.6:compile" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-security:jar:2.5.6:compile" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-validation:jar:2.5.6:compile" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-web:jar:2.5.6:compile" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "mysql:mysql-connector-java:jar:8.0.27:runtime" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.6:test" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.security:spring-security-test:jar:5.5.3:test" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-devtools:jar:2.5.6:compile" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
-	"com.example:polls:jar:0.0.1-SNAPSHOT" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.12.5:compile" ; 
+ } digraph "com:polls:jar:0.0.1-SNAPSHOT" { 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-data-jpa:jar:2.5.6:compile" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-security:jar:2.5.6:compile" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-validation:jar:2.5.6:compile" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-web:jar:2.5.6:compile" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "mysql:mysql-connector-java:jar:8.0.27:runtime" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-starter-test:jar:2.5.6:test" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.security:spring-security-test:jar:5.5.3:test" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "org.springframework.boot:spring-boot-devtools:jar:2.5.6:compile" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "io.jsonwebtoken:jjwt-api:jar:0.11.2:compile" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "io.jsonwebtoken:jjwt-impl:jar:0.11.2:runtime" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "io.jsonwebtoken:jjwt-jackson:jar:0.11.2:runtime" ; 
+	"com:polls:jar:0.0.1-SNAPSHOT" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.12.5:compile" ; 
 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.5.6:compile" -> "org.springframework.boot:spring-boot-starter-aop:jar:2.5.6:compile" ; 
 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.5.6:compile" -> "org.springframework.boot:spring-boot-starter-jdbc:jar:2.5.6:compile" ; 
 	"org.springframework.boot:spring-boot-starter-data-jpa:jar:2.5.6:compile" -> "jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile" ; 
