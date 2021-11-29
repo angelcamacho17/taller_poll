@@ -50,7 +50,7 @@ public class PollController {
     }
 
     @PostMapping
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasRole('ADMIN')")
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<?> createPoll(@CurrentUser UserPrincipal currentUser, @Valid @RequestBody PollRequest pollRequest) {
         Poll poll = pollService.createPoll(currentUser, pollRequest);
@@ -72,7 +72,7 @@ public class PollController {
     }
 
     @PostMapping("/{pollId}/votes")
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasRole('ADMIN')")
     @CrossOrigin(origins = "http://localhost:3000")
     public PollResponse castVote(@CurrentUser UserPrincipal currentUser,
                          @PathVariable Long pollId,

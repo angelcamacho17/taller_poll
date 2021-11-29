@@ -27,9 +27,13 @@ class Signup extends Component {
             },
             password: {
                 value: ''
+            },
+            admin: {
+                value: false
             }
         }
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleAdminChange = this.handleAdminChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.validateUsernameAvailability = this.validateUsernameAvailability.bind(this);
         this.validateEmailAvailability = this.validateEmailAvailability.bind(this);
@@ -49,6 +53,18 @@ class Signup extends Component {
         });
     }
 
+    handleAdminChange(event) {
+        const target = event.target;
+        const inputName = target.name;        
+        const inputValue = target.checked;
+
+        this.setState({
+            [inputName] : {
+                value: inputValue
+            }
+        });
+    }
+
     handleSubmit(event) {
         event.preventDefault();
     
@@ -56,8 +72,10 @@ class Signup extends Component {
             name: this.state.name.value,
             email: this.state.email.value,
             username: this.state.username.value,
-            password: this.state.password.value
+            password: this.state.password.value,
+            admin: this.state.admin.value ? "admin" : "user"
         };
+        console.log(signupRequest)
         signup(signupRequest)
         .then(response => {
             notification.success({
@@ -139,6 +157,14 @@ class Signup extends Component {
                                 placeholder="A password between 6 to 20 characters" 
                                 value={this.state.password.value} 
                                 onChange={(event) => this.handleInputChange(event, this.validatePassword)} />    
+                        </FormItem>
+                        <FormItem label="Admin user">
+                            <Input 
+                                size="large"
+                                name="admin" 
+                                type="checkbox"
+                                checked={this.state.admin.value}
+                                onChange={(event) => this.handleAdminChange(event)} />    
                         </FormItem>
                         <FormItem>
                             <Button type="primary" 

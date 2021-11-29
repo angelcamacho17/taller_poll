@@ -23,6 +23,10 @@ public class SignUpRequest {
     @NotBlank
     @Size(min = 6, max = 20)
     private String password;
+    
+    @NotBlank
+    @Size(max = 60)
+    private String admin;
 
     public String getName() {
         return name;
@@ -30,6 +34,14 @@ public class SignUpRequest {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(String admin) {
+        this.admin = admin;
     }
 
     public String getUsername() {
